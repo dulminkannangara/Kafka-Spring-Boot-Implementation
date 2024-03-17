@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "a73d2936-3007-48b3-aac2-a0c3da9009d8",
+		"name": "Kafka Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14407860"
+	},
+	"item": [
+		{
+			"name": "GetProducer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/kafka/publish?message=hello world",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"kafka",
+						"publish"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "hello world"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostProducer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 100,\r\n    \"firstName\": \"Dulmin\",\r\n    \"lastName\": \"Kannangara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/kafka/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"kafka",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
